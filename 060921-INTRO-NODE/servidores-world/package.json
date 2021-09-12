@@ -1,0 +1,15 @@
+{
+  "name": "servidores-world",
+  "version": "1.0.0",
+  "description": "Desafio Servidores Welcome World",
+  "main": "./assets/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon run index.js"
+  },
+  "author": "Yerko Cortes",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

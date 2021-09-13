@@ -1,0 +1,15 @@
+{
+  "name": "black-and-white",
+  "version": "1.0.0",
+  "description": "Desafio Black & White",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Reinaldo Carocca - Yerko Cortes",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.1.1"
+  }
+}

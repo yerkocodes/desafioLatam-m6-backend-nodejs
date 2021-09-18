@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Reinaldo Carocca - Yerko Cortes",
   "license": "MIT",
   "dependencies": {
+    "nodemon": "^2.0.12",
     "yargs": "^17.1.1"
   }
 }

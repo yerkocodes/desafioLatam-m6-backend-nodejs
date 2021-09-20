@@ -1,0 +1,12 @@
+
+Destinatarios: yerkodigotest@gmail.com, reinaldo@gmail.com.
+Asunto: Testeando y probando.
+Contenido:
+
+<p>Hola las estadisticas son: <br></p>
+
+El valor del dolar el dia de hoy es: 780.59
+El valor del euro el dia de hoy es: 917.69
+El valor del uf el dia de hoy es: 30048.36
+El valor del utm el dia de hoy es: 52631
+            

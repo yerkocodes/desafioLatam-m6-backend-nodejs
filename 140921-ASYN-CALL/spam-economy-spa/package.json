@@ -1,13 +1,16 @@
 {
   "dependencies": {
-    "nodemailer": "^6.6.3"
+    "axios": "^0.21.4",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2"
   },
   "name": "correos-masivos",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",

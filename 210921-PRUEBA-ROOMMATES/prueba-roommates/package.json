@@ -1,0 +1,24 @@
+{
+  "name": "prueba-roommates",
+  "version": "1.0.0",
+  "description": "Prueba Roommates E-camp M6-Desarrollo-BackEnd-NODEJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yerkodigo/desafioLatam-m6-backend-nodejs.git"
+  },
+  "author": "Yerko Cortes Baeza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yerkodigo/desafioLatam-m6-backend-nodejs/issues"
+  },
+  "homepage": "https://github.com/yerkodigo/desafioLatam-m6-backend-nodejs#readme",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "nodemon": "^2.0.12"
+  }
+}

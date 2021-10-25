@@ -1,7 +1,7 @@
 const http = require('http');
 const axios = require('axios');
 const fs = require('fs');
-const getDataUserMod = require('./modules/getdatauser');
+const { routeApi } = require('./routes/api');
 
 const APIRANDOM = `https://randomuser.me/api`;
 const PORT = process.env.PORT || 3000;
@@ -33,22 +33,7 @@ http
       });
     };
 
-    if ( req.url == '/roommate' ) { 
-
-      getDataUserMod(APIRANDOM);
-
-      //console.log(getDataUserMod(APIRANDOM));
-
-      //axios.get(APIRANDOM)
-        //.then((data) => {
-          //getDataUserMod(data);
-          ////console.log(data.data);
-          ////res.end();
-        //})
-        //.catch((err) => {
-          //console.log(err);
-        //})
-    };
+    routeApi(req, res)
 
   })
   .listen(PORT, () => {

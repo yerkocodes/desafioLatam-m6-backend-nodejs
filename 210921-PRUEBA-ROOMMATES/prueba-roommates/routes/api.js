@@ -5,11 +5,11 @@ module.exports = {
   routeApi: ( req, res ) => {
     const { url, method } = req;
 
-    if ( url === '/roommate' ) { 
+    if ( url === '/roommates' ) { 
       roommate.routes(req, res);
     };
 
-    if ( url === '/gasto' ) { 
+    if ( url.startsWith('/gasto') ) { 
       gasto.routes(req, res);
     };
     

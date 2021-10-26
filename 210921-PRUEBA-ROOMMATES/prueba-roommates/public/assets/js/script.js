@@ -5,7 +5,9 @@ let gastoEditing = null;
 const getRoommates = async () => {
   const res = await fetch("http://localhost:3000/roommates");
   const data = await res.json();
+  console.log('******' + data); // add
   roommates = data.roommates;
+  console.log(roommates); // add
 };
 const getGastos = async () => {
   const res = await fetch("http://localhost:3000/gastos");
@@ -55,7 +57,7 @@ const imprimir = async () => {
 };
 
 const nuevoRoommate = () => {
-  fetch("http://localhost:3000/roommate", { method: "POST" })
+  fetch("http://localhost:3000/roommates", { method: "POST" })
     .then((res) => res.json())
     .then(() => {
       imprimir();

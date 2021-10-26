@@ -9,6 +9,10 @@ module.exports = {
       gastoController.getGasto(req, res);
     };
 
+    if ( method === 'POST' ) {
+      gastoController.postGasto(req, res);
+    };
+
     if ( method === 'PUT' ) {
       gastoController.putGasto(req, res);
     };

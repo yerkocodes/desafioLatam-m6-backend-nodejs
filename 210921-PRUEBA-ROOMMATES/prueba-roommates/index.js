@@ -3,7 +3,6 @@ const axios = require('axios');
 const fs = require('fs');
 const { routeApi } = require('./routes/api');
 
-const APIRANDOM = `https://randomuser.me/api`;
 const PORT = process.env.PORT || 3000;
 
 http

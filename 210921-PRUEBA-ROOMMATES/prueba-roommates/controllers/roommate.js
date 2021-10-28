@@ -33,6 +33,7 @@ module.exports = {
       roommatesArrayJson.push(randomPerson);
       fs.writeFileSync("roommates.json", JSON.stringify(roommatesJson));
       res.end(JSON.stringify(roommatesJson));
+      console.log('Nuevo Roommate agregado.');
       console.log(roommatesJson);
       //console.log(randomPerson);
       //console.log(roommatesArrayJson);

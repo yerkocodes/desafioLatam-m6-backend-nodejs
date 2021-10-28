@@ -41,12 +41,17 @@ module.exports = {
     req.on('data', (payload) => {
       //console.log(payload);
       data = JSON.parse(payload);
+      console.log('---------')
+      console.log(data)
+      console.log('---------')
     });
 
     req.on('end', () => {
       //console.log('bien')
       gastosJson.gastos = gastosArrayJson.map((g) => {
-        if ( g.id == data.id ) {
+        if ( g.id === id ) {
+          //console.log('OKKK')
+          //console.log(data)
           return data;
         };
         return g;
@@ -68,7 +73,7 @@ module.exports = {
     console.log(gastosJson);
     fs.writeFileSync("gastos.json", JSON.stringify(gastosJson));
     console.log(gastosJson);
-    res.end
+    res.end()
   },
 
 };

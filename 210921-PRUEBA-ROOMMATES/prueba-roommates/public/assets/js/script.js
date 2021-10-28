@@ -2,6 +2,12 @@ let roommates = [];
 let gastos = [];
 let gastoEditing = null;
 
+const reloadPage = () => {
+  setTimeout(() => {
+    location.reload();
+  }, 500);
+};
+
 const getRoommates = async () => {
   const res = await fetch("http://localhost:3000/roommates");
   const data = await res.json();
@@ -61,6 +67,7 @@ const nuevoRoommate = () => {
     .then((res) => res.json())
     .then(() => {
       imprimir();
+      reloadPage();
     });
 };
 
@@ -68,15 +75,21 @@ const agregarGasto = async () => {
   const roommateSelected = $("#roommatesSelect").val();
   const descripcion = $("#descripcion").val();
   const monto = Number($("#monto").val());
-  await fetch("http://localhost:3000/gasto", {
-    method: "POST",
-    body: JSON.stringify({
-      roommate: roommateSelected,
-      descripcion,
-      monto,
-    }),
-  });
-  imprimir();
+  if ( roommateSelected !== null ) {
+    await fetch("http://localhost:3000/gasto", {
+      method: "POST",
+      body: JSON.stringify({
+        roommate: roommateSelected,
+        descripcion,
+        monto,
+      }),
+    });
+    imprimir();
+    reloadPage();
+  } else {
+    alert('Debe seleccionar un Roommate para agregar un gasto.');
+  };
+
 };
 
 const deleteGasto = async (id) => {
@@ -84,6 +97,7 @@ const deleteGasto = async (id) => {
     method: "DELETE",
   });
   imprimir();
+  reloadPage();
 };
 
 const updateGasto = async () => {
@@ -100,6 +114,7 @@ const updateGasto = async () => {
   });
   $("#exampleModal").modal("hide");
   imprimir();
+  reloadPage();
 };
 
 const editGasto = (id) => {
@@ -111,4 +126,5 @@ const editGasto = (id) => {
 };
 
 imprimir();
+//reloadPage();
 
